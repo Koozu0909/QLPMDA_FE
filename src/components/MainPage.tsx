@@ -1,4 +1,5 @@
 import  Header  from './Header/Header';
+import FooterRaw from './Footer/Footer';
 import Carousel from './MainPage_component/SlideShow';
 
 const MainPage = () => {
@@ -7,6 +8,7 @@ const MainPage = () => {
             {/* <img src={imageRight} alt="right-financial" className="absolute bottom-0 right-0 w-[30rem]"/> */}
             <Header />
             <Carousel />
+            <FooterRaw />
         </div>
     )
 }
