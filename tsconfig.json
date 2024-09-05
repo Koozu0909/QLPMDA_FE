@@ -1,0 +1,23 @@
+/**
+ * tsconfig.json
+ * 
+ * Configuration file for TypeScript compiler options.
+ * 
+ * @property {Array} files - An array of file names to be included in the compilation.
+ * @property {Array} references - An array of references to other TypeScript configuration files.
+ * @property {string} baseUrl - The base directory for resolving non-relative module names.
+ * @property {Object} paths - A mapping of module names to paths or patterns.
+ */
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+}
