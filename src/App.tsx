@@ -2,14 +2,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import AllowedAccess from './components/AllowedAccess';
+import AllowedAccess from './components/Auth/AllowedAccess';
 import RouterError from './components/RouterError';
 import SignIn from './components/Forms/SignIn';
 import SignUp from './components/Forms/SignUp';
-import Registered from './components/Registered';
+import Registered from './components/Auth/Registered';
 import ForgotPassword from './components/Forms/ForgotPassword';
 import ChangePassword from './components/Forms/ChangePassword';
-import ChangePasswordReady from './components/ChangePasswordReady';
+import ChangePasswordReady from './components/Auth/ChangePasswordReady';
 import  MainPage  from './components/MainPage';
 
 

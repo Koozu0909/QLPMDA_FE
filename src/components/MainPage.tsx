@@ -1,13 +1,15 @@
 import  Header  from './Header/Header';
 import FooterRaw from './Footer/Footer';
 import Carousel from './MainPage_component/SlideShow';
+import Container1 from './MainPage_component/Container1';
 
 const MainPage = () => {
     return(
         <div >
-            {/* <img src={imageRight} alt="right-financial" className="absolute bottom-0 right-0 w-[30rem]"/> */}
             <Header />
             <Carousel />
+            <Container1 />
+            <Container1 />
             <FooterRaw />
         </div>
     )
