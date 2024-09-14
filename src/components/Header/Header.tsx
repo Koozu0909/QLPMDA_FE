@@ -22,7 +22,7 @@ function Header() {
         </NavbarLink>
         <NavbarLink href="/">Marketplace</NavbarLink>
         <NavbarLink href="/">Resources</NavbarLink>
-        <NavbarLink href="/">Contact</NavbarLink>
+        <NavbarLink href="/cart">Cart</NavbarLink>
       </NavbarCollapse>
   
     </MegaMenu>

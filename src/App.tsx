@@ -10,13 +10,25 @@ import Registered from './components/Auth/Registered';
 import ForgotPassword from './components/Forms/ForgotPassword';
 import ChangePassword from './components/Forms/ChangePassword';
 import ChangePasswordReady from './components/Auth/ChangePasswordReady';
-import  MainPage  from './components/MainPage';
+import Carousel from './components/MainPage_component/SlideShow';
+import Container1 from "./components/MainPage_component/Container1";
+import Header from "./components/Header/Header";
+import FooterRaw from "./components/Footer/Footer";
+import Cart from "./components/Cart/Cart";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />,
+    element:<div>
+    <Carousel />
+    <Container1 api="/api/Products/GetAll" />
+    <Container1 api="/api/Products/GetAll" />
+  </div>,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
   {
     path: "/",
@@ -60,7 +72,9 @@ function App() {
 
   return (
     <>
-        <RouterProvider router={router} />
+     <Header />
+     <RouterProvider router={router} />
+     <FooterRaw />
     </>
   )
 }
