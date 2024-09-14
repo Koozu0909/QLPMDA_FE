@@ -16,6 +16,7 @@
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.9.0",
     "@phosphor-icons/react": "^2.1.7",
+    "axios": "^1.7.7",
     "flowbite-react": "^0.10.1",
     "mui-one-time-password-input": "^2.0.3",
     "phosphor-react": "^1.4.1",

@@ -4,6 +4,7 @@ import Carousel from './MainPage_component/SlideShow';
 import Container1 from './MainPage_component/Container1';
 
 const MainPage = () => {
+
     return(
         <div >
             <Header />

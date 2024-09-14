@@ -1,68 +1,33 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
+import useAxios from '../..';
+import Product from '../../Models/Product';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import { useEffect } from 'react';
 
-// fakeData
-const fakeData = [
-  {
-    id: 1,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 2,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 3,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 4,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 5,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 6,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 7,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 8,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-  {
-    id: 9,
-    name: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-    price: 599,
-    image: "https://picsum.photos/id/237/200/300",
-  },
-];
+
+var fakeData: Product[] = []
 function Container1() {
+
+  const { response, error, loading, fetchData } = useAxios()
+  const fetchProducts = async () => {
+    try {
+      var data = await fetchData({ url: '/api/Products/GetAll', method: 'GET' })
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    fetchProducts()
+    if (response) {
+      fakeData = response;
+      console.log(fakeData)
+    }
+  }, [])
   return (
     <div className='w-4/5 m-auto my-4'>
       <h1 className='text-2xl text-red-500 font-bold'>TOP SẢN PHẨM</h1>
@@ -90,7 +55,7 @@ function Container1() {
               <div className="px-5 pb-5 h-2/5">
                 <a href="#">
                   <h5 className="text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
-                    {item.name}
+                    {item.productName}
                   </h5>
                 </a>
                 <div className="flex items-center justify-between">
