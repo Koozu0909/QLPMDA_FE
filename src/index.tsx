@@ -54,6 +54,7 @@ const useAxios = () => {
       const result = await axiosInstance({ url, method, data, params, signal: controller.signal });
       setResponse(result.data);
       setLoading(false);
+      return result.data;
     } catch (error: any) {
       if (axios.isCancel(error)){
         console.log('Request canceled', error.message);

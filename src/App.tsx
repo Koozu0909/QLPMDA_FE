@@ -15,6 +15,8 @@ import Container1 from "./components/MainPage_component/Container1";
 import Header from "./components/Header/Header";
 import FooterRaw from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
+import CheckOut from "./components/Cart/Checkout";
+import PaymentResponse from "./components/Cart/PaymentResponse";
 
 
 const router = createBrowserRouter([
@@ -29,10 +31,17 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart />,
+  },{
+    path: "/checkout",
+    element: <CheckOut />,
   },
   {
     path: "/",
     element: <SignIn />,
+  },
+  {
+    path: "/payment/return",
+    element: <PaymentResponse />,
   },
   {
     path: "/u",
